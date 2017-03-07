@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="RITLCoderMakeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please input some word to make the qrcode" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Caj-lK-U5i">
+                                <rect key="frame" x="36" y="40" width="303" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="9nh-5n-Nai"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7Q-eU-Nbj">
+                                <rect key="frame" x="36" y="181" width="303" height="30"/>
+                                <color key="backgroundColor" red="0.21094140710000001" green="0.62295835160000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6mN-wu-yyY"/>
+                                </constraints>
+                                <state key="normal" title="Click me, Start to make qrcode">
+                                    <color key="titleShadowColor" red="0.21094140713825327" green="0.6229583515594852" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ritl_startMake:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tRC-gP-4ft"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生成的二维码" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0G-Sz-b1T">
+                                <rect key="frame" x="63" y="218" width="14" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="Hss-Y5-Xt3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elo-hm-hoc">
+                                <rect key="frame" x="107" y="226" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="1BJ-bG-OIc"/>
+                                    <constraint firstAttribute="width" secondItem="elo-hm-hoc" secondAttribute="height" multiplier="1:1" id="Y5G-Yi-98J"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="我是解析结果" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bNm-mE-eXr">
+                                <rect key="frame" x="67.5" y="416" width="240" height="161"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="MSt-Yv-Eb7"/>
+                                    <constraint firstAttribute="height" constant="161" id="UAA-eD-HRk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUv-VA-5z3">
+                                <rect key="frame" x="36" y="597" width="303" height="57"/>
+                                <color key="backgroundColor" red="0.77771126329999996" green="0.87749487390000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="vU7-HP-z0b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="点击我解析二维码"/>
+                                <connections>
+                                    <action selector="ritl_startDecode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bep-26-UNG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21094140710000001" green="0.62295835160000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v7Q-eU-Nbj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="1Pv-QA-Qpz"/>
+                            <constraint firstItem="Caj-lK-U5i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="5KT-hL-HCb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Caj-lK-U5i" secondAttribute="trailing" constant="20" id="7Oc-JF-FEu"/>
+                            <constraint firstItem="CUv-VA-5z3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="BiL-YV-JTg"/>
+                            <constraint firstItem="F0G-Sz-b1T" firstAttribute="top" secondItem="v7Q-eU-Nbj" secondAttribute="bottom" constant="7" id="DJx-wB-0B7"/>
+                            <constraint firstItem="bNm-mE-eXr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dcg-2v-DeR"/>
+                            <constraint firstItem="Caj-lK-U5i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="K17-jU-ktS"/>
+                            <constraint firstItem="elo-hm-hoc" firstAttribute="leading" secondItem="F0G-Sz-b1T" secondAttribute="trailing" constant="30" id="Yah-o5-LBH"/>
+                            <constraint firstItem="elo-hm-hoc" firstAttribute="height" secondItem="F0G-Sz-b1T" secondAttribute="height" id="YmQ-ZM-2j4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v7Q-eU-Nbj" secondAttribute="trailing" constant="20" id="ZZS-A5-laV"/>
+                            <constraint firstItem="elo-hm-hoc" firstAttribute="top" secondItem="v7Q-eU-Nbj" secondAttribute="bottom" constant="15" id="dJy-Z7-w4c"/>
+                            <constraint firstItem="bNm-mE-eXr" firstAttribute="top" secondItem="elo-hm-hoc" secondAttribute="bottom" constant="30" id="gbN-0e-T2p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CUv-VA-5z3" secondAttribute="trailing" constant="20" id="lZ3-iw-iEr"/>
+                            <constraint firstItem="elo-hm-hoc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lZO-IK-dWr"/>
+                            <constraint firstItem="v7Q-eU-Nbj" firstAttribute="top" secondItem="Caj-lK-U5i" secondAttribute="bottom" constant="21" id="lo3-O8-Qzo"/>
+                            <constraint firstItem="CUv-VA-5z3" firstAttribute="top" secondItem="bNm-mE-eXr" secondAttribute="bottom" constant="20" id="uH1-sh-Zdb"/>
+                            <constraint firstItem="CUv-VA-5z3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wdg-cL-RKN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnDeQRCode" destination="CUv-VA-5z3" id="KvP-1A-x4X"/>
+                        <outlet property="ritl_decodeTextView" destination="bNm-mE-eXr" id="bmM-II-1Se"/>
+                        <outlet property="ritl_imageView" destination="elo-hm-hoc" id="pYG-GS-Oca"/>
+                        <outlet property="ritl_textView" destination="Caj-lK-U5i" id="Z6T-A4-fvS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+</document>
