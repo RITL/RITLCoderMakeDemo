@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		DB6095EF1E6E94D800A81FA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6095EE1E6E94D800A81FA8 /* AppDelegate.swift */; };
-		DB6095F11E6E94D800A81FA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6095F01E6E94D800A81FA8 /* ViewController.swift */; };
+		DB6095F11E6E94D800A81FA8 /* RITLQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6095F01E6E94D800A81FA8 /* RITLQRCodeViewController.swift */; };
 		DB6095F41E6E94D800A81FA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6095F21E6E94D800A81FA8 /* Main.storyboard */; };
 		DB6095F61E6E94D800A81FA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6095F51E6E94D800A81FA8 /* Assets.xcassets */; };
 		DB6095F91E6E94D800A81FA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6095F71E6E94D800A81FA8 /* LaunchScreen.storyboard */; };
 		DB6096011E6E97B900A81FA8 /* RITLQRCoderMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6096001E6E97B900A81FA8 /* RITLQRCoderMaker.swift */; };
 		DB6096031E6EB06000A81FA8 /* RITLQRCoderAnalyor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6096021E6EB06000A81FA8 /* RITLQRCoderAnalyor.swift */; };
+		DBC2AB4C1E7796C70065DD16 /* RITLCoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC2AB4B1E7796C70065DD16 /* RITLCoderExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB6095EB1E6E94D800A81FA8 /* RITLCoderMakeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RITLCoderMakeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6095EE1E6E94D800A81FA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB6095F01E6E94D800A81FA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB6095F01E6E94D800A81FA8 /* RITLQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RITLQRCodeViewController.swift; sourceTree = "<group>"; };
 		DB6095F31E6E94D800A81FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB6095F51E6E94D800A81FA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6095F81E6E94D800A81FA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB6095FA1E6E94D800A81FA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB6096001E6E97B900A81FA8 /* RITLQRCoderMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RITLQRCoderMaker.swift; sourceTree = "<group>"; };
 		DB6096021E6EB06000A81FA8 /* RITLQRCoderAnalyor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RITLQRCoderAnalyor.swift; sourceTree = "<group>"; };
+		DBC2AB4B1E7796C70065DD16 /* RITLCoderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RITLCoderExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				DB6095EE1E6E94D800A81FA8 /* AppDelegate.swift */,
-				DB6095F01E6E94D800A81FA8 /* ViewController.swift */,
+				DB6095F01E6E94D800A81FA8 /* RITLQRCodeViewController.swift */,
 				DB6096001E6E97B900A81FA8 /* RITLQRCoderMaker.swift */,
 				DB6096021E6EB06000A81FA8 /* RITLQRCoderAnalyor.swift */,
+				DBC2AB4B1E7796C70065DD16 /* RITLCoderExtension.swift */,
 				DB6095F21E6E94D800A81FA8 /* Main.storyboard */,
 				DB6095F51E6E94D800A81FA8 /* Assets.xcassets */,
 				DB6095F71E6E94D800A81FA8 /* LaunchScreen.storyboard */,
@@ -145,7 +148,8 @@
 			files = (
 				DB6096031E6EB06000A81FA8 /* RITLQRCoderAnalyor.swift in Sources */,
 				DB6096011E6E97B900A81FA8 /* RITLQRCoderMaker.swift in Sources */,
-				DB6095F11E6E94D800A81FA8 /* ViewController.swift in Sources */,
+				DB6095F11E6E94D800A81FA8 /* RITLQRCodeViewController.swift in Sources */,
+				DBC2AB4C1E7796C70065DD16 /* RITLCoderExtension.swift in Sources */,
 				DB6095EF1E6E94D800A81FA8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +312,7 @@
 				DB6095FF1E6E94D800A81FA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

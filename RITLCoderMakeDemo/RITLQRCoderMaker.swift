@@ -23,10 +23,8 @@ class RITLQRCoderMaker: NSObject {
     /// - Parameters:
     ///   - value: 二维码内容
     ///   - size: 生成图片的大小
-    ///   - colorful: 使用颜色，默认为false
-    ///   - color: 生成的颜色，默认为黑色
     /// - Returns: 生成的二维码图片对象
-    func start(value:String, size:CGFloat, colorful:Bool = false, color:UIColor = .black) -> UIImage? {
+    func createQRCode(value:String, size:CGFloat) -> UIImage? {
         
         // 生成一个过滤器
         guard let filter = CIFilter(name: RITLQRCoderMakerProps.name) else {
@@ -49,8 +47,10 @@ class RITLQRCoderMaker: NSObject {
             return nil
         }
         
-        return __ritl_create(highDefinition: image, size: size, colorful: colorful, color: color)
+        return createColorfulQRCode(highDefinition: image, size: size)
     }
+    
+    
     
     
     /// 生成高清二维码
@@ -58,10 +58,9 @@ class RITLQRCoderMaker: NSObject {
     /// - Parameters:
     ///   - image: 处理的CIImage对象
     ///   - size: 二维码的大小
-    ///   - colorful: 是否使用色彩
     ///   - color: 色彩,默认为黑色
     /// - Returns: 高清二维码图片
-    fileprivate func __ritl_create(highDefinition image:CIImage, size:CGFloat,colorful:Bool = false, color:UIColor = .black) -> UIImage? {
+    func createColorfulQRCode(highDefinition image:CIImage, size:CGFloat, color:UIColor = .black) -> UIImage? {
         
         // 获得图片最小的矩形范围
         let extentRect = image.extent.integral
@@ -101,18 +100,10 @@ class RITLQRCoderMaker: NSObject {
             
             print("创建图片失败!"); return nil
         }
-        
-        // 黑白色彩
-        if !colorful {
-            
-            return UIImage(cgImage: scaledImage)
-        }
 
         //彩色
         return __ritl_colorful(image: UIImage(cgImage: scaledImage), color: color)
     }
-    
-    
     
     
     /// 将图片进行色彩填充
@@ -123,16 +114,16 @@ class RITLQRCoderMaker: NSObject {
     /// - Returns: 彩色二维码
     fileprivate func __ritl_colorful(image:UIImage,color:UIColor) -> UIImage? {
         
-//        //获得高宽
-//        let imageWidth: Int = Int(image.size.width)
-//        let imageHeight: Int = Int(image.size.height)
-//        
-//        let bytesPerRow = imageWidth * 4
-////        let rgbImageBuf = 
-//        
+        //获得高宽
+        let imageWidth: Int = Int(image.size.width)
+        let imageHeight: Int = Int(image.size.height)
+
+        let bytesPerRow = imageWidth * 4
+//////        let rgbImageBuf =
+//
 //        //生成色彩域
-//        let colorSapce = CGColorSpaceCreateDeviceRGB()
-//        
+        let colorSapce = CGColorSpaceCreateDeviceRGB()
+//
 //        //创建map，使用RGB进行渲染
 //        guard let bitmapRef = CGContext.init(data: nil, width: imageWidth, height: imageHeight, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSapce, bitmapInfo: <#T##UInt32#>) else {
 //            
@@ -144,3 +135,5 @@ class RITLQRCoderMaker: NSObject {
     }
 
 }
+
+
